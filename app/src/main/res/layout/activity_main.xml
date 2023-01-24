@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/sp1"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="#FDA2A2"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="TRENDING"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view"/>
+                </LinearLayout>
+
+<!--                second-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="ORIGINALS"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view2"/>
+                </LinearLayout>
+<!--               third -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="RECOMEND"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view3"/>
+                </LinearLayout>
+<!--                FOUR-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="NEWS"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view4"/>
+                </LinearLayout>
+<!--                FIVE-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="LOCK UP EPISODES"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view5"/>
+                </LinearLayout>
+<!--             start   SIX-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Movies"
+                        android:textStyle="bold"
+                        android:paddingLeft="10dp"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:scrollbars="none"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/Recycler_view6"/>
+                </LinearLayout>
+<!--                start seven-->
+
+
+
+
+
+
+
+
+
+<!--    last end            -->
+            </LinearLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>
