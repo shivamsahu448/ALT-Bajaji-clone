@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4259/1364259-v-fe5f361f4eae",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1970/1441970-v-574d1988c10a",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6594/1446594-v-8ccc26ba3e66",
-
+//commit check
 
     };
 
@@ -98,7 +98,6 @@ public class MainActivity extends AppCompatActivity {
 
     };
     private String[] LockupUrals={
-
              "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9239/1389239-v-b354c74533f6",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/6699/1026699-v-cb786ee970de",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9233/1389233-v-9aaacc3bf07f",
