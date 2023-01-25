@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -62,7 +63,7 @@ public class TrandingRecylerAdapter extends RecyclerView.Adapter<TrandingRecyler
         return TrandingModels_arr.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public ImageView imageView;
         public ShimmerFrameLayout shimmerFrameLayout;
         public ImageView simmer_imageview;
@@ -71,6 +72,16 @@ public class TrandingRecylerAdapter extends RecyclerView.Adapter<TrandingRecyler
             imageView=itemView.findViewById(R.id.trend_pic);
             shimmerFrameLayout=itemView.findViewById(R.id.trending_list_shimmer_container);
             simmer_imageview=itemView.findViewById(R.id.iv_trending_simmer);
+
+           imageView.setOnClickListener(this);
+
+
+        }
+
+
+        @Override
+        public void onClick(View view) {
+            Toast.makeText(context, "this is toast", Toast.LENGTH_SHORT).show();
         }
     }
 }
