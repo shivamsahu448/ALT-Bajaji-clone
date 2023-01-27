@@ -41,14 +41,14 @@ public class TrandingRecylerAdapter extends RecyclerView.Adapter<TrandingRecyler
       final  int i=position;
       holder.imageView.setVisibility(View.GONE);
         holder.shimmerFrameLayout.startShimmer();
-        holder.imageView.setVisibility(View.VISIBLE);
+        holder.simmer_imageview.setVisibility(View.VISIBLE);
         Picasso.get().load(Uri.parse(TrandingModels_arr.get(i).getImage())).into(holder.imageView);
 
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
                 holder.shimmerFrameLayout.stopShimmer();
-                holder.shimmerFrameLayout.setVisibility(View.GONE);
+                holder.simmer_imageview.setVisibility(View.GONE);
                 holder.imageView.setVisibility(View.VISIBLE);
             }
         },3000);

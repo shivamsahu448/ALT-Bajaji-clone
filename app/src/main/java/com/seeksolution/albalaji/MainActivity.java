@@ -11,17 +11,23 @@ import com.seeksolution.albalaji.Adpaters.MoviesAdapter;
 import com.seeksolution.albalaji.Adpaters.NewsAdapter;
 import com.seeksolution.albalaji.Adpaters.OriginalAdapter;
 import com.seeksolution.albalaji.Adpaters.RecommendedAdapter;
+import com.seeksolution.albalaji.Adpaters.SliderAdapter;
 import com.seeksolution.albalaji.Adpaters.TrandingRecylerAdapter;
 import com.seeksolution.albalaji.models.LockUpModual;
 import com.seeksolution.albalaji.models.MoviesModual;
 import com.seeksolution.albalaji.models.NewsModel;
 import com.seeksolution.albalaji.models.OriginalModual;
 import com.seeksolution.albalaji.models.RecommendModel;
+import com.seeksolution.albalaji.models.SliderModel;
 import com.seeksolution.albalaji.models.TrandingModels;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    private SliderView sliderView;
     private RecyclerView recyclerView,recyclerView2,recyclerView3,recyclerView4,recyclerView5,recyclerView6;
     LinearLayoutManager Horizontal, Horizontal2, Horizontal3, Horizontal4, Horizontal5,Horizontal6 ;
 
@@ -31,6 +37,16 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<NewsModel>News_arr=new ArrayList<>();
     ArrayList<LockUpModual>LockUp_arr=new ArrayList<>();
     ArrayList<MoviesModual>Movies_arr=new ArrayList<>();
+    ArrayList<SliderModel>slider_array=new ArrayList<>();
+
+    private String [] Sliderautoimgurls={
+            "https://cdn.cloud.altbalaji.com/thumbnails/2022-08/1660631725015138800_73.jpg",
+            "https://cdn.cloud.altbalaji.com/thumbnails/2022-08/1659861892021069300_73.jpg",
+            "https://cdn.cloud.altbalaji.com/thumbnails/2022-05/1651956706004799700_73.jpg",
+            "https://cdn.cloud.altbalaji.com/thumbnails/2022-08/1659861151097777900_73.jpg",
+            "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/4156/1434156-v-f44a741e0902",
+
+    };
     private String[] TrendingUrals={
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/2387/1452387-v-e9e11947b44a",
             "https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1158/1451158-v-60ae0c6f2c82",
@@ -141,9 +157,12 @@ public class MainActivity extends AppCompatActivity {
         recyclerView4=(RecyclerView)findViewById(R.id.Recycler_view4);
         recyclerView5=(RecyclerView)findViewById(R.id.Recycler_view5);
         recyclerView6=(RecyclerView)findViewById(R.id.Recycler_view6);
+        sliderView=(SliderView) findViewById(R.id.imageSlider);
 
 
-
+        for(int i=0;i<Sliderautoimgurls.length;i++){
+            slider_array.add(new SliderModel(Sliderautoimgurls[i]));
+        }
         for(int i=0;i<TrendingUrals.length;i++){
             TrandingModels_arr.add(new TrandingModels(TrendingUrals[i]));
 
@@ -173,6 +192,17 @@ public class MainActivity extends AppCompatActivity {
             Movies_arr.add(new MoviesModual(MoviesUrals[i]));
 
         }
+
+        SliderAdapter adapterSlider=new SliderAdapter(getApplicationContext(),slider_array);
+        sliderView.setSliderAdapter(adapterSlider);
+        sliderView.dataSetChanged();
+
+        // set your Animision
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.SLIDE);
+        sliderView.setSliderTransformAnimation(SliderAnimations.CUBEINROTATIONTRANSFORMATION);
+        sliderView.setAutoCycle(true);
+
+
 
 
         Horizontal=new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false);
